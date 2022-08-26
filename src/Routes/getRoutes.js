@@ -1,5 +1,5 @@
 const express = require('express');
-const { fileReader, findTalker } = require('./helpers');
+const { fileReader, findTalker } = require('../helpers');
 
 const notFound = {
     message: 'Pessoa palestrante não encontrada',
