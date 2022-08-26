@@ -7,4 +7,13 @@ const fileReader = async () => {
   return parsedObj;
 };
 
-module.exports = fileReader;
+const findTalker = async (id) => {
+  const talkerObj = await fileReader();
+  const talker = talkerObj.find((tal) => tal.id === id);
+  return talker;
+};
+
+module.exports = {
+  fileReader,
+  findTalker,
+};
