@@ -39,12 +39,12 @@ const isPasswordValid = (req, res, next) => {
 
 const isUserEmpty = (req, res, next) => {
   const { email, password } = req.body;
-  if (email === '') {
+  if (email === undefined) {
     return res.status(400).json({
       message: 'O campo "email" é obrigatório',
     });
   } 
-  if (password === '') {
+  if (password === undefined) {
     return res.status(400).json({
       message: 'O campo "password" é obrigatório',
     });
