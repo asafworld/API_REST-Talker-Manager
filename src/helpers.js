@@ -8,6 +8,16 @@ const fileReader = async () => {
   return parsedObj;
 };
 
+const fileWriter = async (newFile) => {
+  const path = './src/talker.json';  
+  try {
+    await fs.writeFile(path, newFile);
+    console.log('Arquivo escrito com sucesso!');
+  } catch (err) {
+    console.error(`Erro ao escrever o arquivo: ${err.message}`);
+  }
+};
+
 const findTalker = async (id) => {
   const talkerObj = await fileReader();
   const talker = talkerObj.find((tal) => tal.id === id);
@@ -154,18 +164,9 @@ const checkTalk = (req, res, next) => {
 };
 // Regex date from https://www.regextester.com/99555
 
-const fileWriter = async (newFile) => {
-  const path = './src/talker.json';  
-  try {
-    await fs.writeFile(path, newFile);
-    console.log('Arquivo escrito com sucesso!');
-  } catch (err) {
-    console.error(`Erro ao escrever o arquivo: ${err.message}`);
-  }
-};
-
 module.exports = {
   fileReader,
+  fileWriter,
   findTalker,
   isEmailValid,
   isPasswordValid,
@@ -176,5 +177,4 @@ module.exports = {
   checkName,
   checkAge,
   checkTalk,
-  fileWriter,
 };
