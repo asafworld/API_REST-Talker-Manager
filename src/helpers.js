@@ -12,7 +12,6 @@ const fileWriter = async (newFile) => {
   const path = './src/talker.json';  
   try {
     await fs.writeFile(path, newFile);
-    console.log('Arquivo escrito com sucesso!');
   } catch (err) {
     console.error(`Erro ao escrever o arquivo: ${err.message}`);
   }
