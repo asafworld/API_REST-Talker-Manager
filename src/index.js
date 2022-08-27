@@ -5,11 +5,13 @@ const loginRouter = require('./Routes/postLogin');
 const postRouter = require('./Routes/postRoutes');
 const putRouter = require('./Routes/putRoutes');
 const deleteRouter = require('./Routes/deleteRoutes');
+const searchRouter = require('./Routes/searchRoute');
 
 const app = express();
 app.use(bodyParser.json());
 app.use(express.json());
 
+app.use('/talker', searchRouter);
 app.use('/talker', getRouter);
 app.use('/login', loginRouter);
 app.use('/talker', postRouter);
