@@ -171,7 +171,6 @@ module.exports = {
   isPasswordValid,
   isUserEmpty,
   generateToken,
-  // tokenReader,
   checkToken,
   checkName,
   checkAge,
