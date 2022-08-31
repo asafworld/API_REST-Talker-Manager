@@ -1,14 +1,15 @@
 # TALKER MANAGER
 
-### Projeto desenvolvido por Gabriel Asaf durante o curso de Back-End da Trybe. 
+##### Projeto desenvolvido por Gabriel Asaf durante o curso de Back-End da Trybe. 
+##### API REST destinada a gerência de dados (CRUD) dos palestrantes de um evento.
 
-### API REST destinada a gerência de dados (CRUD) dos palestrantes de um evento.
+# ÍNDICE
 
 <!--ts-->
    * [Organização do Repositório](#organização-do-repositório)
-      * Arquivos (#arquivos)
-   * [Endpoints] (#endpoints)
-   * [Funções Helpers] (#funções-helpers)
+      * [Arquivos](#arquivos)
+   * [Endpoints](#endpoints)
+   * [Funções Helpers](#funções-helpers)
    * [Instalação](#instalacao)
    * [Como usar](#como-usar)
 <!--te-->
